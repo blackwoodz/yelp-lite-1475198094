@@ -1,5 +1,7 @@
 ActiveAdmin.register OwnerFeedback do
 
+ permit_params :review_id, :owner_id, :response
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
