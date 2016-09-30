@@ -15,6 +15,10 @@ class Restaurant < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :descriptive_tags,
+             :through => :tags,
+             :source => :tag
+
   # Validations
 
 end
