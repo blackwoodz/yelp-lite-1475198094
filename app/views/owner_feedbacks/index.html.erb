@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>
+    Owner feedbacks
+    <a href="/owner_feedbacks/new" class="btn btn-lg btn-success">New Owner feedback</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Review</th>
+        <th>Owner</th>
+        <th>Response</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @owner_feedbacks.each do |owner_feedback| %>
+      <tr>
+        <td><%= owner_feedback.review_id %></td>
+        <td><%= owner_feedback.owner_id %></td>
+        <td><%= owner_feedback.response %></td>
+        <td>
+          <a href="/owner_feedbacks/<%= owner_feedback.id %>" class="btn btn-primary">Show</a>
+          <a href="/owner_feedbacks/<%= owner_feedback.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_owner_feedback/<%= owner_feedback.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

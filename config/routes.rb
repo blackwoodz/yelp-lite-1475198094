@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Owner_feedback resource:
+  # CREATE
+  get "/owner_feedbacks/new", :controller => "owner_feedbacks", :action => "new"
+  post "/create_owner_feedback", :controller => "owner_feedbacks", :action => "create"
+
+  # READ
+  get "/owner_feedbacks", :controller => "owner_feedbacks", :action => "index"
+  get "/owner_feedbacks/:id", :controller => "owner_feedbacks", :action => "show"
+
+  # UPDATE
+  get "/owner_feedbacks/:id/edit", :controller => "owner_feedbacks", :action => "edit"
+  post "/update_owner_feedback/:id", :controller => "owner_feedbacks", :action => "update"
+
+  # DELETE
+  get "/delete_owner_feedback/:id", :controller => "owner_feedbacks", :action => "destroy"
+  #------------------------------
+
   # Routes for the Ownership resource:
   # CREATE
   get "/ownerships/new", :controller => "ownerships", :action => "new"
